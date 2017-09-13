@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>travel-index</title>
+	<link href="lib/bootstrap/css/bootstrap.css" rel="stylesheet"><!-- 引入bootstrap样式表 -->
+
+    <!-- 条件注释，当版本小于IE9引入 -->
+	<!--[if lt IE 9]>
+	  <h1 class="h1">你的浏览器不支持本网站，请先<a href="#">升级</a></h1>
+      <script src="lib/html5shiv/html5shiv.min.js"></script>
+      <script src="lib/respond/respond.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body id="index">
+	<div class="header">
+    <div class="topbar hidden-sm hidden-xs">
+      <div class="container">
+        <div class="row topbar-row">
+          <div class="col-md-2 col-lg-2"></div>
+          <div class="col-md-4 col-lg-4 login-join">
+            <span class="text textl">
+              <a href=""><i class="iconfont">&#xe699;</i>
+              用户登录</a>
+            </span>
+            <span class="text textr">
+               <a href=""><i class="iconfont">&#xe699;</i>
+              加入我们</a>
+            </span>
+          </div>
+          <div class="col-md-4 col-lg-4 linkus">
+            <span class="text">
+              联系我们：400-800-8800
+            </span>
+          </div>
+          <div class="col-md-2 col-lg-2"></div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#nav-list" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="./images/logo.png"></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="nav-list">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#">主页</a></li>
+            <li><a href="#">目的地</a></li>
+            <li><a href="#">特制品</a></li>
+            <li><a href="#">节假日</a></li>
+            <li><a href="#">博客</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav> 
+  </div><!--header,分为topbar和nav-->
+  <div class="carousel-field">
+    <div id="main-banner" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#main-banner" data-slide-to="0" class="active"></li>
+        <li data-target="#main-banner" data-slide-to="1"></li>
+      </ol>
+
+      <!-- Wrapper for slides -->
+      <div class="carousel-inner" role="listbox">
+        <div class="item active" data-image-lg="./images/banner.jpg" data-image-sm="./images/banner.jpg">
+          <!-- <img src="./images/banner.jpg" alt="..."> -->
+        </div>
+        <div class="item" data-image-lg="./images/banner.jpg" data-image-sm="./images/banner.jpg">
+          <!-- <img src="./images/banner.jpg" alt="..."> -->
+        </div>
+      </div>
+
+      <!-- Controls -->
+      <a class="left carousel-control" href="#main-banner" role="button" data-slide="prev">
+        <i class="iconfont iconfont-left">&#xe608;</i>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#main-banner" role="button" data-slide="next">
+        <i class="iconfont iconfont-right">&#xe606;</i>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+  </div><!--carousel-field-->
+  <div class="searchbar"></div><!--searchbar用于旅游目的地查询-->
+  <div class="display-image"></div><!--display-image用于展示旅游目的地-->
+  <div class="travel-log"></div><!--travel-log旅行日志-->
+  <div class="leave-msg"></div><!--leave-msg留言区-->
+  <div class="footer"></div><!--页脚--> 
+
+  <!-- 引入jquery -->
+  <script src="lib/jquery/jquery.js"></script>
+  <!-- 引入bootstrap -->
+  <script src="lib/bootstrap/js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
