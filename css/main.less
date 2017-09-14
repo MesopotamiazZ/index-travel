@@ -24,6 +24,7 @@
 
 /**main**/
 #index {
+  // position: relative;
   .header{
     .topbar {
       height: 25px;
@@ -122,19 +123,274 @@
   }
 
   .searchbar {
-
+    height: 40px;
+    background-color: rgb(44, 62, 80);
+    position: relative;
+    top: -7px;
+    .container {
+      height: 100%;
+      padding: 2px 10px;
+      text-align: center;
+      .text {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 70px;
+        position: relative;
+        span:nth-child(1) {
+          display: block;
+          color: rgb(81, 130, 176);
+        }
+        span:nth-child(2) {
+          display: block;
+          color: #fff;
+        }
+        i {
+          position: absolute;
+          top: -15px;
+          right: -60px;
+          font-size: 50px;
+          color: rgb(159, 176, 192);
+        }
+      }
+      .input-group {
+        margin-right: 80px;
+        vertical-align: middle;
+        display: inline-block;
+        label {
+          margin-right: 10px;
+          color: #fff;
+        }
+      }
+      .search-button {
+        // vertical-align: middle;
+        display: inline-block;
+        width: 90px;
+        height: 22px;
+        background-color: rgb(29, 210, 175);
+        padding: 2px 5px;
+        cursor: pointer;
+      }
+    }
   }
 
   .display-image {
+    // position: relative;
+    // top: -5px;
+    margin-bottom: 50px;
+    .title {
+      text-align: center;
+      h1 {
+        color: rgb(44, 62, 80);
+      }
+      h2 {
+        color: rgb(44, 62, 80);
+        margin-bottom: 20px;
+      }
+    }
+    .pics {
+      .container-fluid {
+        .pics-row {
+          .content {
+            .frame {
+              .pic {
+                // width: 200px;
+                // height: 148px;
+                margin: 0 auto;
+                // background-image: url(../images/pic01.jpg);
+                background-position: center center;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+                outline: rgb(238, 238, 238) solid 2px;
+                cursor: pointer;
+              }
+              .desc {
+                height: 40px;
+                background-color: rgb(238, 238, 238);
+                margin: 0 auto;
+                margin-bottom: 20px;
+                position: relative;
+                cursor: pointer;
+                padding: 5px;
+                h5 {
+                  margin: 0;
+                  font-size: 14px;
+                  color: rgb(98, 98, 98);
+                }
+                p {
+                  margin: 0;
+                  font-size: 12px;
+                  color: rgb(98, 98, 98);
+                }
+                i {
+                  position: absolute;
+                  top: 10px;
+                  right: 5px;
+                }
+              }
+            }
+            @media (min-width: 1296px) {
+              .pic {
+                width: 200px;
+                height: 148px;
+              }
+              .desc {
+                width: 204px;
+              }
+            }
+            @media (min-width: 1100px) and (max-width: 1296px) {
+              .pic {
+                width: 160px;
+                height: 118px;
+              }
+              .desc {
+                width: 164px;
+              }
+            }
+            @media (min-width: 992px) and (max-width: 1100px) {
+              .pic {
+                width: 140px;
+                height: 103px;
+              }
+              .desc {
+                width: 144px;
+              }
+            }
+            @media (min-width: 600px) and (max-width: 992px) {
+              .pic {
+                width: 240px;
+                height: 178px;
+              }
+              .desc {
+                width: 244px;
+              }
+            }
 
+            @media (max-width: 600px) {
+              .pic {
+                width: 140px;
+                height: 103px;
+              }
+              .desc {
+                width: 144px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   .travel-log {
-
+    height: 350px;
+    background-image: url(../images/bg_img.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    position: relative;
+    .log-cover {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(44, 62, 80, 0.7);
+      .title {
+        color: #fff;
+        text-align: center;
+        h2 {
+          margin-top: 40px;
+        }
+        h4 {
+          margin-bottom: 40px;
+        }
+      }
+      .icons {
+        .container {
+          .icons-row {
+            .icon {
+              color: #fff;
+              a {
+                text-decoration: none;
+                .circle {
+                  width: 90px;
+                  height: 90px;
+                  border: 2px solid #fff;
+                  border-radius: 50%;
+                  position: relative;
+                  margin: 0 auto;
+                  i {
+                    position: absolute;
+                    top: 22px;
+                    left: 27px;
+                    font-size: 30px;
+                    color: #fff;
+                  }
+                }
+                .desc {
+                  color: #fff;
+                  margin: 0 auto;
+                  text-align: center;
+                  margin-top: 10px;
+                  margin-bottom: 5px;
+                }
+              }
+              a:hover {
+                .circle {
+                  border: 2px solid rgb(29, 210, 175);
+                  i {
+                    color: rgb(29, 210, 175);
+                  }
+                }
+                .desc {
+                  color: rgb(29, 210, 175);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 992px) {
+    .travel-log {
+      height: 390px;
+    }
   }
 
-  .leave-msg {
 
+  .leave-msg {
+    width: 100%;
+    .title {
+      text-align: center;
+      h3 {
+        color: rgb(44, 62, 80);
+      }
+      h5 {
+        margin-bottom: 30px;
+      }
+    }
+    .wrapper {
+      width: 100%;
+      overflow: hidden;
+      // white-space: nowrap;
+      .content {
+        width: 2000px;
+        .board {
+          width: 370px;
+          height: 100px;
+          display: inline-block;
+          border: 1px solid rgb(238, 238, 238);
+          margin-bottom: 15px;
+          margin-right: 10px;
+          padding: 7px;
+          p {
+            font-size: 12px;
+            margin-bottom: 2px;
+          }
+        }
+      }
+    }
   }
 
   .footer {
@@ -261,5 +517,4 @@
   background-color: #fff;
   vertical-align: bottom;
 }
-
 

@@ -1,7 +1,9 @@
 window.onload = function(){
   $(window).on('resize',setImg).trigger('resize');
-  // tooltips();
   carsouelMove();
+  setbg_img()
+  clickFrame()
+  bs()
 }
 
 /*轮播图片响应式，动态获取轮播图片*/
@@ -46,4 +48,46 @@ function carsouelMove(){
       $carousel.carousel(startX>endX ? 'next' : 'prev');
     }
   });
+}
+
+/**在pic中使用对应背景图片**/
+function setbg_img() {
+  $('.pic').each(function(index) {
+    // console.log($(this))
+    $(this).css('backgroundImage', 'url("D:/work2/bootstrap_work/travel-index/images/pic0'+(index+1)+'.jpg")')
+  })
+}
+
+/**当点击frame时触发**/
+function clickFrame() {
+  // console.log($('.frame'))
+  $('.frame').on('mouseenter', function() {
+    // console.log($(this))
+    $(this).children('.pic').css('outline', 'rgb(29, 210, 175) solid 2px')
+    $(this).children('.desc').css('backgroundColor', 'rgb(29, 210, 175)').animate({
+      height: '60px'
+    })
+  })
+  $('.frame').on('mouseleave', function() {
+    // console.log($(this))
+    $(this).children('.pic').css('outline', 'rgb(238, 238, 238) solid 2px')
+    $(this).children('.desc').css('backgroundColor', 'rgb(238, 238, 238)').animate({
+      height: '40px'
+    })
+  })
+}
+
+/**实现横向滚动**/
+function bs() {
+  var wrapper = document.querySelector('.wrapper')
+  var scroll = new BScroll(wrapper, {
+    scrollX: true,
+    click: true
+  })
+  $('.board').each(function() {
+    $(this).on('click', function() {
+      $(this).siblings('.board').css('border-top', '1px solid rgb(238, 238, 238)')
+      $(this).css('border-top', '3px solid rgb(29, 210, 175)')
+    })
+  })
 }
