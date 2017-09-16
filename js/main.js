@@ -52,8 +52,11 @@ function carsouelMove(){
 
 /**在pic中使用对应背景图片**/
 function setbg_img() {
+  $('.pic').each(() => {
+    console.log($(this))
+  })
   $('.pic').each(function(index) {
-    // console.log($(this))
+    console.log($(this))
     $(this).css('backgroundImage', 'url("D:/work2/bootstrap_work/travel-index/images/pic0'+(index+1)+'.jpg")')
   })
 }
